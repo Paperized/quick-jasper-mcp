@@ -79,9 +79,9 @@ Always set:
 
 Unless the user explicitly requests another destination, save final output artifacts in:
 
-- `.quik-jaxper/` inside the current workspace.
+- `.quick-jasper-mcp/` inside the current workspace.
 
-If tool output lands in a temporary run directory, copy final artifacts into `.quik-jaxper/`.
+If tool output lands in a temporary run directory, copy final artifacts into `.quick-jasper-mcp/`.
 
 ## Known Problems and Fixes
 
@@ -108,7 +108,7 @@ When reporting results, include:
 - `validate`: success/failure + short error summary
 - `render`: success/failure + short error summary
 - `run_dir` and `output_path`
-- final artifact path under `.quik-jaxper/`
+- final artifact path under `.quick-jasper-mcp/`
 
 ## Practical Examples (Verified)
 
@@ -129,7 +129,7 @@ print(res.get("success"), res.get("exit_code"))
 PY
 ```
 
-### Render PDF and copy final artifact to `.quik-jaxper/`
+### Render PDF and copy final artifact to `.quick-jasper-mcp/`
 
 ```bash
 source .venv/bin/activate
@@ -152,7 +152,7 @@ res = render_preview(
 )
 
 if res.get("success") and res.get("output_path"):
-    out = Path(".quik-jaxper")
+    out = Path(".quick-jasper-mcp")
     out.mkdir(exist_ok=True)
     target = out / "example-report.pdf"
     target.write_bytes(Path(res["output_path"]).read_bytes())

@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>local</groupId>
-  <artifactId>quik-jaxper-jasper-deps</artifactId>
+  <artifactId>quick-jasper-mcp-jasper-deps</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
 

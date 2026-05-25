@@ -1,4 +1,4 @@
-# quik-jaxper
+# quick-jasper-mcp
 
 MCP tool to validate JRXML and render Jasper previews (`png`/`pdf`).
 
@@ -40,12 +40,12 @@ Linux / WSL:
 [mcp_servers.jrxml_validation]
 command = "python3"
 args = ["-m", "jrxml_mcp_server.server"]
-cwd = "/path/to/quik-jaxper"
+cwd = "/path/to/quick-jasper-mcp"
 
 [mcp_servers.jrxml_validation.env]
-JRXML_MCP_WORKSPACE = "/path/to/quik-jaxper"
-JRXML_MCP_STORAGE = "/path/to/quik-jaxper/.jrxml_mcp"
-JASPER_LIB_DIR = "/path/to/quik-jaxper/vendor/jasper-lib"
+JRXML_MCP_WORKSPACE = "/path/to/quick-jasper-mcp"
+JRXML_MCP_STORAGE = "/path/to/quick-jasper-mcp/.jrxml_mcp"
+JASPER_LIB_DIR = "/path/to/quick-jasper-mcp/vendor/jasper-lib"
 JRXML_MCP_RETAIN_RUNS = "true"
 ```
 
@@ -55,12 +55,12 @@ Windows:
 [mcp_servers.jrxml_validation]
 command = "python"
 args = ["-m", "jrxml_mcp_server.server"]
-cwd = "C:\\path\\to\\quik-jaxper"
+cwd = "C:\\path\\to\\quick-jasper-mcp"
 
 [mcp_servers.jrxml_validation.env]
-JRXML_MCP_WORKSPACE = "C:\\path\\to\\quik-jaxper"
-JRXML_MCP_STORAGE = "C:\\path\\to\\quik-jaxper\\.jrxml_mcp"
-JASPER_LIB_DIR = "C:\\path\\to\\quik-jaxper\\vendor\\jasper-lib"
+JRXML_MCP_WORKSPACE = "C:\\path\\to\\quick-jasper-mcp"
+JRXML_MCP_STORAGE = "C:\\path\\to\\quick-jasper-mcp\\.jrxml_mcp"
+JASPER_LIB_DIR = "C:\\path\\to\\quick-jasper-mcp\\vendor\\jasper-lib"
 JRXML_MCP_RETAIN_RUNS = "true"
 ```
 
@@ -69,7 +69,7 @@ JRXML_MCP_RETAIN_RUNS = "true"
 1. `validate_jrxml(...)`
 2. fix JRXML/resources if needed
 3. `render_preview(...)`
-4. save final outputs to `.quik-jaxper/` (unless user explicitly asks another path)
+4. save final outputs to `.quick-jasper-mcp/` (unless user explicitly asks another path)
 
 Use `jrxml_relative_path` + `resource_paths` when template/resources use relative paths.
 
