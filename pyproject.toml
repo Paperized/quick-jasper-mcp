@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quik-jrxml-mcp"
+version = "0.1.0"
+description = "MCP server for JRXML validation and preview rendering with JasperReports 7.x"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=1.9.0",
+]
+
+[project.scripts]
+jrxml-mcp-server = "jrxml_mcp_server.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
